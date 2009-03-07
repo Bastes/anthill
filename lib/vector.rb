@@ -1,10 +1,14 @@
+=begin rdoc
+=Simple vector class
+=end
 module Anthill
   class Vector
+    # coordinates
     attr_reader :x, :y
 
     def initialize x = 0, y = 0
-      @x = x
-      @y = y
+      @x = x.to_f
+      @y = y.to_f
     end
 
     def == other
@@ -21,7 +25,7 @@ module Anthill
       Vector.new @x - other.x, @y - other.y
     end
 
-    def radius
+    def length
       Math.sqrt(@x**2 + @y**2)
     end
   end

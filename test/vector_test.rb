@@ -35,9 +35,9 @@ module Anthill
       assert_equal v2, v1
     end
 
-    def test_radius
+    def test_length
       v = Vector.new 3, -4
-      assert_equal 5, v.radius
+      assert_equal 5, v.length
     end
   end
 end
