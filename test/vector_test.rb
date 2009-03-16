@@ -25,7 +25,7 @@ module Anthill
 
     def test_plus
       v1 = Vector.new(2, 3) + Vector.new(-3, 5)
-      v2 = Vector.new -1, 8
+      v2 = Vector.new(-1, 8)
       assert_equal v2, v1
     end
 
