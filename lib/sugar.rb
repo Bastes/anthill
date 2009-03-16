@@ -8,7 +8,8 @@ module Anthill
     # quantity of sugar
     attr_reader :drops
 
-    def initialize drops
+    def initialize position, drops
+      self.position = position
       @drops = drops
     end
   end
