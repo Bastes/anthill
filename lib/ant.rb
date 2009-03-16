@@ -7,7 +7,7 @@ module Anthill
 
     attr_reader :anthill
 
-    def initialize position, anthill
+    def initialize anthill, position
       raise ArgumentError.new "#{anthill} should be an anthill." unless anthill.is_a? Anthill
       self.position = position
       @anthill = anthill
