@@ -1,4 +1,3 @@
-
 =begin rdoc
 =The Anthill, where ants feels at home
 =end
