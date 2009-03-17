@@ -4,4 +4,7 @@
 
 $: << File.dirname(__FILE__)
 
-#require 'lib/'
+require 'lib/vector'
+require 'lib/positioned'
+require 'lib/anthill'
+require 'lib/ant'
