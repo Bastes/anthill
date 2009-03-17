@@ -8,5 +8,9 @@ module Anthill
     def initialize position
       self.position = position
     end
+
+    def spawn_ant
+      Ant.new self, @position
+    end
   end
 end

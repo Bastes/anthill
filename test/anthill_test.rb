@@ -9,7 +9,13 @@ module Anthill
 
     def test_new_anthill
       anthill = Anthill.new(Vector.new(-6, -4))
-      assert Vector.new(-6, -4), anthill.position
+      assert_equal Vector.new(-6, -4), anthill.position
+    end
+
+    def test_add_new_ant
+      anthill = Anthill.new(Vector.new(3, 2))
+      ant = anthill.spawn_ant
+      assert_equal Vector.new(3, 2), ant.position
     end
   end
 end
