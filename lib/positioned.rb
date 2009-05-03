@@ -1,15 +1,27 @@
+require 'lib/vector'
+
 =begin rdoc
 =Position handling
 Gives an element a positon.
 =end
 module Anthill
   module Positioned
-    attr_reader :position
+    attr_reader :map, :position
 
-    # a position must be a vector
-    def position= vector
-      raise ArgumentError.new("#{vector} should be a vector") unless vector.is_a? Vector
+    # a position must describe a vector
+    def position= *args
+      if args.first.is_a? Vector
+        vector = args.first
+      else
+        vector = Vector.new(args)
+      end
       @position = vector
+    end
+
+    # a map must be a map (really)
+    def map= value
+      raise ArgumentError.new("#{value} is not a map.") unless value.nil? or value.is_a? Map
+      @map = value
     end
   end
 end
